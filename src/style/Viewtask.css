@@ -1,0 +1,45 @@
+.backbuttonlink{
+    color: white;
+    text-decoration: none;
+}
+.backbutton:hover{
+    color:whitesmoke;
+}
+#viewtaksName{
+    margin-top:100px;
+    margin-bottom: 40px;
+    display: flex;
+    margin-left: 50px;
+}
+#viewtaskDescription{
+    display: flex;
+    margin-left: 50px;
+}
+.viewformLabel{
+    font-weight: bold;
+    font-size: 20px;
+}
+#viewformData1{
+   font-size: 20px;
+   margin-left: 80px;
+}
+#viewformData2{
+    font-size: 20px;
+    margin-left: 27px;
+ }
+ #backbutton{
+    margin-top: -200px;
+    margin-left: -330px;
+    font-size: 35px;
+    border: none;
+    background-color: white;
+    position: absolute;
+ }
+ #backbutton:hover{
+    color: brown;
+ }
+ #taskHeader{
+    position:absolute;
+    margin-top: 12px;
+    margin-left: 300px;
+ }

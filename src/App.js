@@ -1,18 +1,30 @@
 import './App.css';
-import Login from './container/login';
-import Register from './container/register';
-import Taskpage from './container/taskpage';
-import {Routes ,Route} from 'react-router-dom';
+import Login from './container/Login';
+import Register from './container/Register';
+import Tasks from './container/Tasks';
+import Createtask from './container/Createtask';
+import Viewtask from './container/Viewtask';
+import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Edittask from './container/Edittask';
 
 function App() {
+
+  let isLoggedIn = localStorage.getItem('token') ? true : false;
+
+  if (!isLoggedIn && window.location.pathname !== '/') {
+    window.location.href = '/';
+  }
   return (
     <div className="App">
-    <Routes> 
-    <Route path="/" element={<Login/>}/>
-    <Route path="/taskpage" element={<Taskpage/>}/>
-    <Route path="/signup" element={<Register/>}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/createtask" element={<Createtask />} />
+        <Route path='/viewtask/:id' element={<Viewtask />} />
+        <Route path='/edit/:id' element={<Edittask />} />
+      </Routes>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.registerform {
+  width: 350px;
+  height: 550px;
+  margin: 100px 500px;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 40px 50px;
+}
+.signUpButton {
+  color: blue;
+}
+#textbox {
+  width: 450px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.tablebtn {
+  background-color: none;
+  border: none;
+}
+h6{
+    color: red;
+}

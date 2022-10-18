@@ -1,0 +1,16 @@
+.linkbutton{
+    color: black;
+    text-decoration: none;
+}
+.linkbutton:hover{
+    color: white;
+}
+#updatebutton{
+    margin-top: 50px;
+    font-size: 18px;
+}
+#editbackbutton{
+    margin-top: 80px;
+    margin-left: -600px;
+    font-size: 18px;
+}

@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
-import {getAuth} from './firebase/auth';  
+import { getAuth } from 'firebase/auth';
 
-  const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyDdv8mfKpAPf-S7I5RDt4L9FIgE6qEm9D8",
   authDomain: "react-authentication-ccef4.firebaseapp.com",
   projectId: "react-authentication-ccef4",
@@ -12,5 +12,5 @@ import {getAuth} from './firebase/auth';
 };
 
 const app = initializeApp(firebaseConfig);
-const auth =getAuth();
-export {app , auth};
+export const auth = getAuth(app);
+export default app;

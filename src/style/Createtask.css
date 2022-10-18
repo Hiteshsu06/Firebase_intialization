@@ -1,0 +1,82 @@
+.inputName {
+  display: flex;
+  width: 350px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.inputDescription {
+  display: flex;
+  width: 700px;
+  margin-bottom: 10px;
+}
+
+#inputStatus {
+  text-align: left;
+  width: 500px;
+  display: flex;
+}
+.inputContainer {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 800px;
+  height: 350px;
+  margin-top: 50px;
+  margin-left: 300px;
+  padding: 10px 30px;
+}
+.formLabel {
+  font-weight: bold;
+  font-size: 17px;
+}
+#formcontrol1 {
+  margin-left: 60px;
+}
+#formcontrol2 {
+  margin-left: 15px;
+}
+#status1 {
+  margin-left: 60px;
+}
+#status {
+  margin-left: 20px;
+}
+#sumbitButton {
+  position: absolute;
+  margin-left: -260px;
+  margin-top: 35px;
+  font-size: 18px;
+}
+#resetButton {
+  position: absolute;
+  margin-left: -160px;
+  margin-top: 35px;
+  font-size: 18px;
+}
+#backButton {
+  position: absolute;
+  margin-left: -75px;
+  margin-top: 35px;
+}
+#radiolabel {
+  margin-left: 4px;
+}
+#radiolabel1 {
+  margin-left: 4px;
+}
+.statusHeader{
+  font-weight: bold;
+  font-size: 17px;
+}
+#createTaskBackButtonLink{
+  color:black;
+  text-decoration: none;
+}
+#createTaskBackButtonLink:hover{
+  color: white;
+}
+#createTaskBackButton{
+  position: absolute;
+  margin-top: 170px;
+  margin-left: -400px;
+  font-size: 20px;
+}

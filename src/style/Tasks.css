@@ -1,0 +1,73 @@
+.customTable{
+  border: 1px solid brown;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 150px;
+  height: auto;
+  margin-left:80px ;
+  margin-right:80px ;
+}
+h1{
+  text-decoration: underline;
+}
+#staticsBoxes{
+display: flex;
+margin: 100px 150px;
+}
+.staticBox{
+  border: 2px solid lightcoral;
+  padding: 40px 60px;
+  border-radius: 10px;
+}
+.staticBox:nth-child(1){
+ margin-left:20px;
+ margin-right: 50px;
+}
+.buttonHandler{
+  background-color: white;
+  border: none;
+  font-size: 17px;
+  width:30px;
+}
+.buttonHandler:hover{
+  color: blue;
+}
+#createtask{
+text-decoration: none;
+color: black;
+font-size: 20px;
+}
+#taskbutton{
+  position:absolute;
+  color: black;
+  margin-top:-40px;
+  margin-left: 440px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+#taskbutton:hover{
+  color: white;
+}
+#taskLogin:hover{
+  text-decoration: none;
+  color: white;
+}
+.statisticsButtonLink{
+  color: black;
+}
+.name{
+  width: 200px;
+}
+.description{
+  width: 900px;
+}
+#heading1{
+margin-left: -950px;
+}
+#heading2{
+  margin-left: -920px;
+}
+.thead{
+  text-align: left;
+  font-size: 18px;
+}

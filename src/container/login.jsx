@@ -1,33 +1,41 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import './register.css';
+import { Link, useNavigate } from "react-router-dom";
+import "../style/Register.css";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-const [email,setEmail]=useState("");
-const [password,setPassword]=useState("");
-const [loginInput,setLoginInput]=useState({});
-const [error,setError]=useState("");
+  const navigate = useNavigate();
+  const [loginInput, setLoginInput] = useState({
+    email: "",
+    password: "",
+  });
 
-// Submit button handler
-const loginSubmitHandler=(e)=>{
-e.preventDefault();
-if(!email || !password){
-setError("*please fill the data")
-}
-else{setError("")}
-}
+  //Change Handler
+  const loginChangeHandler = (e) => {
+    const { name, value } = e.target;
+    setLoginInput({ ...loginInput, [name]: value });
+  };
 
-//input field handler
-const handleInput=(e)=>{
-if(e.target.name==="email"){
-setEmail(e.target.value)
-}
-if(e.target.name==="password"){
-setPassword(e.target.value)
-}
-setLoginInput({...loginInput,[e.target.name]: e.target.value})
-console.log("login form data here:",loginInput);
-}
+  //Submit Handler
+  const loginSubmitHandler = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, loginInput.email, loginInput.password)
+      .then((userCredential) => {
+        localStorage.setItem("token", userCredential._tokenResponse.idToken);
+        navigate("/tasks");
+        localStorage.setItem("res", "success");
+      })
+      .catch((error) => {
+        let errorCode = error.code.split("auth/")[1];
+        if (errorCode) {
+          toast.warn(errorCode);
+        }
+      });
+  };
+  
 
   return (
     <div className="registerform">
@@ -43,8 +51,9 @@ console.log("login form data here:",loginInput);
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             placeholder="Email"
-            value={email}
-            onChange={(e)=>handleInput(e)}
+            value={loginInput.email}
+            onChange={loginChangeHandler}
+            required
           />
         </div>
         <div className="mb-3">
@@ -54,25 +63,23 @@ console.log("login form data here:",loginInput);
             className="form-control"
             id="exampleInputPassword1"
             placeholder="Password"
-            value={password}
-            onChange={(e)=>handleInput(e)}
+            value={loginInput.password}
+            onChange={loginChangeHandler}
+            required
           />
         </div>
-        <div>
-          <h6>{error}</h6>
-        </div>
-          <Link className="btn btn-primary" to="/taskpage">
-            LOGIN
-          </Link>
+        <button className="btn btn-primary">Login</button>
       </form>
+      <ToastContainer />
       <br />
       <br />
       <div>
         <span>Not a member</span>
+        <span> </span>
         <span>
-            <Link className="signbtn" to="/signup">
-              Signup
-            </Link>
+          <Link className="signUpButton" to="/register">
+            Signup
+          </Link>
         </span>
       </div>
     </div>
