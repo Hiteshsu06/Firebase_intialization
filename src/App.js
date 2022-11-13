@@ -7,6 +7,8 @@ import Viewtask from './container/Viewtask';
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Edittask from './container/Edittask';
+import Productcart from './container/Productcart';
+
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/tasks" element={<Tasks />} />
+        <Route path="/productcart" element={<Productcart />} />
         <Route path="/register" element={<Register />} />
         <Route path="/createtask" element={<Createtask />} />
         <Route path='/viewtask/:id' element={<Viewtask />} />

@@ -1,0 +1,10 @@
+#product{
+    width: 1100px;
+    height: auto;
+}
+#productCart{
+    display: flex;
+}
+#cart{
+ margin-top: 70px;
+}

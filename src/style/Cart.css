@@ -1,0 +1,68 @@
+#cartTop {
+  display: flex;
+  width: 286px;
+  margin-right: 20px;
+}
+#cartHeading {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 120px;
+  position: absolute;
+  margin-top: -70px;
+}
+.cartimage {
+  width: 70px;
+  height: 70px;
+  border: 1px solid grey;
+}
+.cart {
+  margin-top: 10px;
+  margin-right: 0px;
+  height: 500px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  overflow: scroll;
+}
+#cartlogo {
+  width: 60px;
+}
+#cartlogocontainer {
+  display: float;
+  margin-left: auto;
+  margin-right: 0px;
+}
+#totalprice {
+  display: flex;
+  margin: 20px 30px;
+}
+.cartsbutton {
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  margin: 0px 5px;
+  padding: 0px 0px;
+}
+.cartsbutton:hover {
+  background-color: beige;
+}
+#cartmiddle {
+  display: flex;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+#buttonhandler {
+  padding: 0px 0px;
+  display: flex;
+  margin-left: 70px;
+}
+#textbutton {
+  padding: 0 0;
+  margin-top: 15px;
+  width: 20px;
+}
+#pricebutton {
+  margin-left: 50px;
+}
+#price {
+  margin-left: 50px;
+}

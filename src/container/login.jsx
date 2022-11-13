@@ -25,7 +25,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, loginInput.email, loginInput.password)
       .then((userCredential) => {
         localStorage.setItem("token", userCredential._tokenResponse.idToken);
-        navigate("/tasks");
+        navigate("/productcart");
         localStorage.setItem("res", "success");
       })
       .catch((error) => {
@@ -35,7 +35,6 @@ const Login = () => {
         }
       });
   };
-  
 
   return (
     <div className="registerform">

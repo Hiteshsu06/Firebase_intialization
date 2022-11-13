@@ -1,0 +1,35 @@
+#productHeading {
+  font-size: 40px;
+  font-weight: bold;
+}
+#cart {
+  height: auto;
+}
+#card {
+  width: 300px;
+  height: 440px;
+  margin: 20px 20px;
+}
+#cardimage {
+  background-color: aqua;
+  width: 200px;
+  border-radius: 6px;
+  height: 160px;
+}
+.cardimagecontainer {
+  margin-top: 10px;
+}
+#cardname {
+  height: 135px;
+}
+#wholeContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+#cartbutton{
+    font-size: 18px;
+}
+#cartbuttonyellow{
+  background-color: rgb(255, 255, 113);
+  color: black;
+}
